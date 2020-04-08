@@ -26,17 +26,20 @@
     }
 
     // Bring in main color overlay
-    &:hover:after {
+    &:hover:after,
+    &:active:after {
         transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
     }
 
     // Scale Image On Hover
-    &:hover &-image {
+    &:hover &-image,
+    &:active &-image {
         transform: scale(1.2);
     }
 
     // Bring in text on hover
-    &:hover &-text {
+    &:hover &-text,
+    &:active &-text {
         opacity: 1;
         transform: translateY(0);
     }

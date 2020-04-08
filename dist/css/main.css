@@ -113,11 +113,13 @@ input[class^='btn-']:hover {
     height: 100%;
     transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
     transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1); }
-  .item:hover:after {
+  .item:hover:after, .item:active:after {
     transform: scale(2) translateX(0) translateY(0) rotate(-28deg); }
-  .item:hover .item-image {
+  .item:hover .item-image,
+  .item:active .item-image {
     transform: scale(1.2); }
-  .item:hover .item-text {
+  .item:hover .item-text,
+  .item:active .item-text {
     opacity: 1;
     transform: translateY(0); }
   .item-image {
@@ -237,6 +239,12 @@ img {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(4, 1fr); }
+  #home-a .specials div {
+    border-right: 2px solid #ffbc00;
+    padding-right: 1rem; }
+  #home-a .specials div:last-child {
+    border-right: none;
+    padding-right: 1rem; }
   #home-a .specials .fas {
     color: #ffbc00;
     padding-bottom: 0.4rem; }
@@ -263,6 +271,11 @@ img {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1.5rem;
   text-align: center; }
+  #home-c .process div {
+    border-right: 2px solid #ffbc00;
+    padding-right: 1rem; }
+  #home-c .process div:last-child {
+    border-right: none; }
   #home-c .process-step {
     position: absolute;
     top: 0;
@@ -304,21 +317,28 @@ img {
   grid-area: bioimage; }
 
 #about-a .bio {
-  align-items: center;
   grid-area: bio;
   border-left: 3px solid #ffbc00;
-  padding: 0.8rem; }
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
   #about-a .bio h4 {
-    padding-top: 4rem; }
+    margin-top: 3rem; }
 
 #about-a .award-1 {
-  grid-area: aw-1; }
+  grid-area: aw-1;
+  border-right: 2px solid #ffbc00;
+  padding-right: 1rem; }
 
 #about-a .award-2 {
-  grid-area: aw-2; }
+  grid-area: aw-2;
+  border-right: 2px solid #ffbc00;
+  padding-right: 1rem; }
 
 #about-a .award-3 {
-  grid-area: aw-3; }
+  grid-area: aw-3;
+  padding-right: 1rem; }
 
 #about-a .award-1 .fas,
 #about-a .award-2 .fas,
